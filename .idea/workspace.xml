@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="710ccecf-2e88-4adb-91d2-9f2ff0271197" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/demo/goRoutine.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/syncOnce.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/panicDemo.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/interfaceVal.go" beforeDir="false" afterPath="$PROJECT_DIR$/demo/interfaceVal.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/goRoutine.go" beforeDir="false" afterPath="$PROJECT_DIR$/demo/goRoutine.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,18 +51,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Go Build.go build goRoutine.go">
     <configuration name="go build Go/demo" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="Go" />
-      <working_directory value="$PROJECT_DIR$/" />
+      <working_directory value="$PROJECT_DIR$/demo/" />
       <kind value="PACKAGE" />
       <filePath value="$PROJECT_DIR$/demo/interfaceVal.go" />
       <package value="Go/demo" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
+    <configuration name="go build goRoutine.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="Go" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/demo/goRoutine.go" />
+      <package value="Go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build goRoutine.go" />
         <item itemvalue="Go Build.go build Go/demo" />
       </list>
     </recent_temporary>

@@ -173,7 +173,7 @@ func main()  {
 
 #### 2.2.并发通信
 
-##### 2.2.1 sync包
+##### 2.2.1 sync
 * Mutex: 互斥锁
 * RWMutex：读写锁
 * WaitGroup：并发等待组
@@ -186,7 +186,7 @@ func (o *Once) Do(f func())
 sync.Once的使用场景例如单例模式、系统初始化。
 例如并发情况下多次调用channel的close会导致panic，解决这个问题我们可以使用sync.Once来保证close只会被执行一次。
 ```
-![用例]{https://github.com/linyuanbin/Go/demo/syncOnce.go}
+[Once用例](https://github.com/linyuanbin/Go/blob/master/demo/syncOnce.go)
 
 * Cond：信号量
 * Pool：临时对象池
@@ -214,9 +214,72 @@ func TestSync_WaitGroup(t *testing.T) {
 }
 ```
 
+##### 2.2.2 channel
+channel是Go语言在语言级别提供的goroutine间的通信方式。我们可以使用channel在两个或</br>
+多个goroutine之间传递消息。</br>
+```
+func Count(ch chan int) {
+ ch <- 1
+ fmt.Println("Counting")
+}
+func main() {
+ chs := make([]chan int， 10)
+ for i := 0; i < 10; i++ {
+ chs[i] = make(chan int)
+ go Count(chs[i])
+ }
+ for _, ch := range(chs) {
+ <-ch
+ }
+} 
+```
+channel是类型相关的。也就是说，一个channel只能传递一种类型的值，这个类型需要在声</br>
+明channel时指定。</br>
+```
+声明一个不带缓存的通道
+ch := make(chan int) 
+声明一个带缓存的通道
+c := make(chan int, 1024) 
+```
 
+### 3.错误处理
 
+#### 3.1.error接口
+Go语言引入了一个关于错误处理的标准模式，即error接口，该接口的定义如下：
+```
+type error interface {
+ Error() string
+} 
+```
+在Go编程中异常情况都是用error表示，go函数可以多个返回值的特点，一般error作为最后的一个</br>
+返回值，用于说明返回值是否可靠或者程序执行是否成功。</br>
+```
+func Stat(name string) (fi FileInfo, err error) {
+ var stat syscall.Stat_t
+ err = syscall.Stat(name, &stat)
+ if err != nil {
+ return nil, &PathError{"stat", name, err}
+ }
+ return fileInfoFromStat(&stat, name), nil
+} 
 
+自定义error:
+errors.New("download error")
+```
+
+* defer关键字
+defer一般用于进行连接或者流的关闭工作，相当于Java中finally的作用，
+
+* panic()和recover()
+Go语言引入了两个内置函数panic()和recover()以报告和处理运行时错误和程序中的错误场景:
+```
+panic():
+//正常的函数执行流程将立即终止，并报告错误；这个过程称为：错误处理流程
+panic(errors.New("download error"))
+```
+
+recover()和defer一起使用，相对于catch异常操作</br>
+[用例](https://github.com/linyuanbin/Go/tree/master/demo/panicDemo.go)
 
 
 
