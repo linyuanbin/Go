@@ -110,7 +110,112 @@ func (mam *Man) GerName() string {
 ```
 
 
-### 2.
+### 2.并发编程
+* **协程**。协程（Coroutine）本质上是一种用户态线程，不需要操作系统来进行抢占式调度，</br>
+且在真正的实现中寄存于线程中，因此，系统开销极小，可以有效提高线程的任务并发</br>
+性，而避免多线程的缺点。使用协程的优点是编程简单，结构清晰；缺点是需要语言的</br>
+支持，如果不支持，则需要用户在程序中自行实现调度器。目前，原生支持协程的语言还很少。</br>
+
+#### 2.1.goroutine使用？
+```
+func Add(x, y int) {
+ z := x + y
+ fmt.Println(z)
+} 
+
+开启一个协程：
+go Add(1, 1) 
+```
+
+真的这么简单么？ </br>
+```
+package main
+
+import "fmt"
+
+func sayHello()  {
+	fmt.Println("hello")
+}
+
+func main()  {
+	go sayHello()
+	fmt.Println("main")
+}
+```
+上面这个程序会输出什么？</br>
+```
+main
+```
+问题分析：</br>
+Go程序从初始化main package并执行main()函数开始，当main()函数返回时，程序退出，</br>
+且程序并不等待其他goroutine（非主goroutine）结束。</br>
+* 方法一：
+```
+package main
+import (
+	"fmt"
+	"sync"
+)
+var lock sync.WaitGroup
+func sayHello()  {
+	fmt.Println("hello")
+	lock.Done()
+}
+
+func main()  {
+	lock.Add(1)
+	go sayHello()
+	lock.Wait()
+	fmt.Println("main")
+}
+```
+下一章节做答案讲解
+
+#### 2.2.并发通信
+
+##### 2.2.1 sync包
+* Mutex: 互斥锁
+* RWMutex：读写锁
+* WaitGroup：并发等待组
+* Once：执行一次</br>
+```
+Once 是一个可以被多次调用但是只执行一次，若每次调用Do时传入参数f不同，但是只有第一个才会被执行。</br>
+用法：
+func (o *Once) Do(f func())
+
+sync.Once的使用场景例如单例模式、系统初始化。
+例如并发情况下多次调用channel的close会导致panic，解决这个问题我们可以使用sync.Once来保证close只会被执行一次。
+```
+![用例]{https://github.com/linyuanbin/Go/demo/syncOnce.go}
+
+* Cond：信号量
+* Pool：临时对象池
+* Map：自带锁的map
+* WaitGroup
+```
+用法：
+func (wg *WaitGroup) Add(delta int)
+func (wg *WaitGroup) Done()
+func (wg *WaitGroup) Wait()
+
+案例：
+var synWait sync.WaitGroup
+func TestSync_WaitGroup(t *testing.T) {
+	num:=100
+	for i:=0;i<num;i++{
+		synWait.Add(1)
+		go func() {
+            ...
+			synWait.Done()
+		}()
+	}
+	synWait.Wait()
+    ...
+}
+```
+
+
+
 
 
 

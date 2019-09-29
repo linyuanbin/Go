@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 type Integer int
 
 func (a Integer) Less(b Integer) bool {
@@ -18,6 +20,10 @@ func main() {
 	var a Integer = 1
 	var b LessAdder = &a //  1 正确
 	var c LessAdder = a  //  2 错误
+	b.Add(2)
+	c.Add(2)
+	fmt.Println(b.Less(4))
+	fmt.Println(c.Less(4))
 }
 
 /**
