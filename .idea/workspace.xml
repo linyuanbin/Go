@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="710ccecf-2e88-4adb-91d2-9f2ff0271197" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/demo/panicDemo.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/model.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/OOP/interface01/interface01.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/OOP/model01/Model01.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/OOP/model02/Model02.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/OOP/template/Template.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/OOP/template/auto/model.go.tmpl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/goRoutine.go" beforeDir="false" afterPath="$PROJECT_DIR$/demo/goRoutine.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,6 +21,20 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -35,9 +53,22 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
+    <property name="configurable.Module.GOPATH.is.expanded" value="false" />
+    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/demo/OOP/template/auto" />
+    <property name="settings.editor.selected.configurable" value="goland.project.structure" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\goproject\src\Go\demo\OOP\template\auto" />
+      <recent name="D:\goproject\src\Go\config" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\goproject\src\Go\demo\OOP\model01" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -51,13 +82,31 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build goRoutine.go">
+  <component name="RunManager" selected="Go Build.go build Go/demo/OOP/model01">
     <configuration name="go build Go/demo" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="Go" />
       <working_directory value="$PROJECT_DIR$/demo/" />
       <kind value="PACKAGE" />
       <filePath value="$PROJECT_DIR$/demo/interfaceVal.go" />
       <package value="Go/demo" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build Go/demo/OOP/model01" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="Go" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/demo/OOP/model01/Model01.go" />
+      <package value="Go/demo/OOP/model01" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build Model01.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="Go" />
+      <working_directory value="$PROJECT_DIR$/demo/OOP/model01" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/demo/OOP/model01/Model01.go" />
+      <package value="Go" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
@@ -70,8 +119,16 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Go Build.go build Go/demo" />
+      <item itemvalue="Go Build.go build Go/demo/OOP/model01" />
+      <item itemvalue="Go Build.go build goRoutine.go" />
+      <item itemvalue="Go Build.go build Model01.go" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build Go/demo/OOP/model01" />
+        <item itemvalue="Go Build.go build Model01.go" />
         <item itemvalue="Go Build.go build goRoutine.go" />
         <item itemvalue="Go Build.go build Go/demo" />
       </list>

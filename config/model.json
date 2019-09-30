@@ -1,0 +1,10 @@
+{
+  "name":"User",
+  "models": [
+    {"Name":"id","Type": "int","DBName": "code","DBType": "int"},
+    {"Name":"name","Type": "string","DBName": "name","DBType": "string"},
+    {"Name":"age","Type": "int","DBName": "age","DBType": "int"},
+    {"Name":"addr","Type": "string","DBName": "addr","DBType": "string"},
+    {"Name":"email","Type": "string","DBName": "email","DBType": "string"}
+  ]
+}

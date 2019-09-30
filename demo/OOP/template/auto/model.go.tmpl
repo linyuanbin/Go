@@ -1,0 +1,7 @@
+package models
+
+type {{.name}} struct{
+     {{- range $mod:=.models}}
+         {{$mod.Name}}   {{$mod.Type}} `db:"{{$mod.DBName}}" type:"{{$mod.DBType}}"`
+     {{- end}}
+ }

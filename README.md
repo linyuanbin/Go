@@ -282,5 +282,3 @@ recover()和defer一起使用，相对于catch异常操作</br>
 [用例](https://github.com/linyuanbin/Go/tree/master/demo/panicDemo.go)
 
 
-
-
