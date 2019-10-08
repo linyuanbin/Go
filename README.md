@@ -263,8 +263,17 @@ func Stat(name string) (fi FileInfo, err error) {
  return fileInfoFromStat(&stat, name), nil
 } 
 
-自定义error:
+创建新error:
 errors.New("download error")
+
+自定义error:
+type myError struct {
+	msg string
+}
+
+func (err myError) Error() string {
+	return err.msg
+}
 ```
 
 * defer关键字
