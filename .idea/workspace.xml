@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="710ccecf-2e88-4adb-91d2-9f2ff0271197" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config/model.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/OOP/interface01/interface01.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/OOP/model01/Model01.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/OOP/model02/Model02.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/OOP/template/Template.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/OOP/template/auto/model.go.tmpl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +75,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build Go/demo/OOP/model01">
+  <component name="RunManager" selected="Go Build.go build Go/demo/OOP/template">
     <configuration name="go build Go/demo" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="Go" />
       <working_directory value="$PROJECT_DIR$/demo/" />
@@ -98,6 +91,15 @@
       <kind value="PACKAGE" />
       <filePath value="$PROJECT_DIR$/demo/OOP/model01/Model01.go" />
       <package value="Go/demo/OOP/model01" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build Go/demo/OOP/template" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="Go" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/demo/OOP/template/Template.go" />
+      <package value="Go/demo/OOP/template" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
@@ -124,9 +126,11 @@
       <item itemvalue="Go Build.go build Go/demo/OOP/model01" />
       <item itemvalue="Go Build.go build goRoutine.go" />
       <item itemvalue="Go Build.go build Model01.go" />
+      <item itemvalue="Go Build.go build Go/demo/OOP/template" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build Go/demo/OOP/template" />
         <item itemvalue="Go Build.go build Go/demo/OOP/model01" />
         <item itemvalue="Go Build.go build Model01.go" />
         <item itemvalue="Go Build.go build goRoutine.go" />

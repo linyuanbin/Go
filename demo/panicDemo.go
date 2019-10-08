@@ -19,5 +19,6 @@ func main()  {
 		}
 	}()
 	hello()
+	//错误捕获也不会继续执行下面的代码
 	fmt.Println("main")
 }
