@@ -112,6 +112,7 @@ func (mam *Man) GerName() string {
 	return mam.Name
 }
 ```
+[接口赋值](https://github.com/linyuanbin/Go/blob/master/demo/interface02/interfaceVal.go)
 
 #### 1.5 泛型（Any 类型）
 由于Go语言中任何对象实例都满足空接口 interface{} ,所以 interface{} 看起来像是可</br>
