@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="710ccecf-2e88-4adb-91d2-9f2ff0271197" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/DOC/《Go语言实战》.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/OOP/Json/JsonMap.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/OOP/template/auto/model.go.tmpl" beforeDir="false" afterPath="$PROJECT_DIR$/demo/OOP/template/auto/model.go.tmpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/OOP/template/out/User.go" beforeDir="false" afterPath="$PROJECT_DIR$/demo/OOP/template/out/User.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/syncOnce.go" beforeDir="false" afterPath="$PROJECT_DIR$/demo/syncOnce.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

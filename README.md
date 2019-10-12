@@ -24,10 +24,29 @@ Go中的main方法的报名必须是叫main(即使真实项目中所在的包名
 ### 1. 面向对象编程(OOP)
 首先，Go语言反对函数和操作符重载（overload），</br>
 其次，Go语言支持类、类成员方法、类的组合，但反对继承，反对虚函数（virtual function） 和虚函数重载。</br>
-再次，Go语言也放弃了构造函数（constructor）和析构函数（destructor）</br>
-在放弃了大量的OOP特性后，Go语言送上了一份非常棒的礼物：接口（interface）<br>
+再次，Go语言也放弃了构造函数（constructor）和析构函数（destructor）在放弃了大量的OOP特性后，Go语言送上了一份非常棒的礼物：接口（interface）<br>
 
-#### 1.1 为类型添加方法
+#### 1.1 结构体
+Go语言的结构体（struct）和其他语言的类（class）有同等的地位，但Go语言放弃了包括继 承在内的大量面向对象特性，</br>
+只保留了组合（composition）这个基础的特性。 </br>
+```
+type Rect struct {
+x, y float64     
+width, height float64 }
+```
+
+#### 1.2 可见性
+Go语言对关键字的增加非常吝啬，其中没有private、protected、public这样的关键 字。要使某个符号对其他包（package）可见</br>
+（即可以访问），需要将该符号定义为以大写字母 开头:
+```
+type User struct {
+	Name    string
+	Age     int32
+	Address string
+}
+```
+
+#### 1.3 为类型添加方法
 ```
 package main
 type Integer int
@@ -60,25 +79,6 @@ func (a *Integer) Add(b Integer) {
 func (a Integer) Add(b Integer) {
 a += b 
 } 
-```
-#### 1.2 结构体
-Go语言的结构体（struct）和其他语言的类（class）有同等的地位，但Go语言放弃了包括继 承在内的大量面向对象特性，</br>
-只保留了组合（composition）这个基础的特性。 </br>
-```
-type Rect struct {
-x, y float64     
-width, height float64 }
-```
-
-#### 1.3 可见性
-Go语言对关键字的增加非常吝啬，其中没有private、protected、public这样的关键 字。要使某个符号对其他包（package）可见</br>
-（即可以访问），需要将该符号定义为以大写字母 开头:
-```
-type User struct {
-	Name    string
-	Age     int32
-	Address string
-}
 ```
 #### 1.4 接口
 * 其他语言接口例子
