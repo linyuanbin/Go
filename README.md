@@ -109,6 +109,15 @@ func (mam *Man) GerName() string {
 }
 ```
 
+#### 1.5. 泛型（Any 类型）
+由于Go语言中任何对象实例都满足空接口 interface{} ,所以 interface{} 看起来像是可</br>
+以指向任何对象的 Any 类型。</br>
+```
+fmt.XXX是个很好例子
+func Println(a ...interface{}) (n int, err error) {
+	return Fprintln(os.Stdout, a...)
+}
+```
 
 ### 2.并发编程
 * **协程**。协程（Coroutine）本质上是一种用户态线程，不需要操作系统来进行抢占式调度，</br>
@@ -127,7 +136,7 @@ func Add(x, y int) {
 go Add(1, 1) 
 ```
 
-真的这么简单么？ </br>
+`真的这么简单么？` </br>
 ```
 package main
 
@@ -176,7 +185,6 @@ func main()  {
 ##### 2.2.1 sync
 * Mutex: 互斥锁
 * RWMutex：读写锁
-* WaitGroup：并发等待组
 * Once：执行一次</br>
 ```
 Once 是一个可以被多次调用但是只执行一次，若每次调用Do时传入参数f不同，但是只有第一个才会被执行。</br>
@@ -191,7 +199,7 @@ sync.Once的使用场景例如单例模式、系统初始化。
 * Cond：信号量
 * Pool：临时对象池
 * Map：自带锁的map
-* WaitGroup
+* WaitGroup 并发等待组
 ```
 用法：
 func (wg *WaitGroup) Add(delta int)
