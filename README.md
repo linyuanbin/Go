@@ -4,6 +4,10 @@
 * [官方文档（中文版）](http://docscn.studygolang.com/)
 * [官方文档（英文版）](http://docs.studygolang.com/)
 * [《Go 语言编程》](https://github.com/KeKe-Li/book/blob/master/Go/%E3%80%8AGo%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A8%8B%E3%80%8B%E9%AB%98%E6%B8%85%E5%AE%8C%E6%95%B4%E7%89%88%E7%94%B5%E5%AD%90%E4%B9%A6.pdf)
+* [Go语言实战](https://github.com/linyuanbin/Go/blob/master/DOC/《Go语言实战》.pdf)
+* [Go规范（中英文）](http://bingohuang.nos-eastchina1.126.net/effective-go-zh-en-gitbook.pdf)
+* [学习1](https://github.com/unknwon/go-study-index)
+* [学习2](https://github.com/unknwon/the-way-to-go_ZH_CN)
 
 ## 开始GO的洗脑
 
@@ -17,13 +21,13 @@ func main()  {
 ```
 Go中的main方法的报名必须是叫main(即使真实项目中所在的包名不是main)</br>
 基于由其他语言的基础开始了解GO（略过基础语法）
-### 1.面向对象编程(OOP)
-首先，Go语言反对函数和操作符重载（overload），
+### 1. 面向对象编程(OOP)
+首先，Go语言反对函数和操作符重载（overload），</br>
 其次，Go语言支持类、类成员方法、类的组合，但反对继承，反对虚函数（virtual function） 和虚函数重载。</br>
 再次，Go语言也放弃了构造函数（constructor）和析构函数（destructor）</br>
 在放弃了大量的OOP特性后，Go语言送上了一份非常棒的礼物：接口（interface）<br>
 
-#### 1.1为类型添加方法
+#### 1.1 为类型添加方法
 ```
 package main
 type Integer int
@@ -38,7 +42,7 @@ func (a Integer) Max(b Integer) bool {
 上面的这个Integer例子如果不使用Go语言的面向对象特性，而使用之前我们介绍的面向</br>
 过程方式实现的话，相应的实现细节将如下所示</br>
 ```
-// 面向过程  
+// 面向过程  什么是方法？什么是函数？
 func Integer_Max(a Integer, b Integer) bool {     
 	return a > b 
 }
@@ -109,7 +113,7 @@ func (mam *Man) GerName() string {
 }
 ```
 
-#### 1.5. 泛型（Any 类型）
+#### 1.5 泛型（Any 类型）
 由于Go语言中任何对象实例都满足空接口 interface{} ,所以 interface{} 看起来像是可</br>
 以指向任何对象的 Any 类型。</br>
 ```
@@ -119,7 +123,7 @@ func Println(a ...interface{}) (n int, err error) {
 }
 ```
 
-### 2.并发编程
+### 2. 并发编程
 * **协程**。协程（Coroutine）本质上是一种用户态线程，不需要操作系统来进行抢占式调度，</br>
 且在真正的实现中寄存于线程中，因此，系统开销极小，可以有效提高线程的任务并发</br>
 性，而避免多线程的缺点。使用协程的优点是编程简单，结构清晰；缺点是需要语言的</br>
@@ -193,6 +197,23 @@ func (o *Once) Do(f func())
 
 sync.Once的使用场景例如单例模式、系统初始化。
 例如并发情况下多次调用channel的close会导致panic，解决这个问题我们可以使用sync.Once来保证close只会被执行一次。
+type Once struct {
+	m    Mutex
+	done uint32
+}
+
+func (o *Once) Do(f func()) {
+	if atomic.LoadUint32(&o.done) == 1 {
+		return
+	}
+	// Slow-path.
+	o.m.Lock()
+	defer o.m.Unlock()
+	if o.done == 0 {
+		defer atomic.StoreUint32(&o.done, 1)
+		f()
+	}
+}
 ```
 [Once用例](https://github.com/linyuanbin/Go/blob/master/demo/syncOnce.go)
 
@@ -298,4 +319,7 @@ panic(errors.New("download error"))
 recover()和defer一起使用，相对于catch异常操作</br>
 [用例](https://github.com/linyuanbin/Go/tree/master/demo/panicDemo.go)
 
+### 3. Go标准库
 
+#### 3.1 Go Template
+[用例](https://github.com/linyuanbin/Go/tree/master/demo/OOP/template/Template.go)

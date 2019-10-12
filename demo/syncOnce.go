@@ -4,12 +4,10 @@ import (
 	"fmt"
 	"sync"
 )
-
-var once sync.Once
 func main()  {
 	var once sync.Once
 	onceBody := func() {
-		fmt.Println("Only once")
+		fmt.Println("执行了一次")
 	}
 	done := make(chan bool)
 	for i := 0; i < 10; i++ {
@@ -19,6 +17,6 @@ func main()  {
 		}()
 	}
 	for i := 0; i < 10; i++ {
-		<-done
+		fmt.Println(<-done,"  ",i+1)
 	}
 }

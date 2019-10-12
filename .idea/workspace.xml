@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="710ccecf-2e88-4adb-91d2-9f2ff0271197" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/DOC/《Go语言实战》.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/OOP/Json/JsonMap.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/OOP/template/auto/model.go.tmpl" beforeDir="false" afterPath="$PROJECT_DIR$/demo/OOP/template/auto/model.go.tmpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/OOP/template/out/User.go" beforeDir="false" afterPath="$PROJECT_DIR$/demo/OOP/template/out/User.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/syncOnce.go" beforeDir="false" afterPath="$PROJECT_DIR$/demo/syncOnce.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,17 +57,18 @@
     <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/demo/OOP/template/auto" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/DOC" />
     <property name="settings.editor.selected.configurable" value="goland.project.structure" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\goproject\src\Go\DOC" />
+      <recent name="D:\goproject\src\Go\demo\OOP\template\auto" />
+      <recent name="D:\goproject\src\Go\config" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\goproject\src\Go\demo\OOP\interface02" />
       <recent name="D:\goproject\src\Go\demo\OOP\model01" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\goproject\src\Go\demo\OOP\template\auto" />
-      <recent name="D:\goproject\src\Go\config" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -77,7 +83,16 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build NewError.go">
+  <component name="RunManager" selected="Go Build.go build Go/demo">
+    <configuration name="go build Go/demo" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="Go" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/demo/syncOnce.go" />
+      <package value="Go/demo" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
     <configuration name="go build Go/demo/OOP/model01" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="Go" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -114,29 +129,20 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build goRoutine.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="Go" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/demo/goRoutine.go" />
-      <package value="Go" />
-      <directory value="$PROJECT_DIR$/" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Go Build.go build Go/demo/OOP/model01" />
-      <item itemvalue="Go Build.go build goRoutine.go" />
       <item itemvalue="Go Build.go build Model01.go" />
       <item itemvalue="Go Build.go build Go/demo/OOP/template" />
       <item itemvalue="Go Build.go build NewError.go" />
+      <item itemvalue="Go Build.go build Go/demo" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build Go/demo" />
         <item itemvalue="Go Build.go build NewError.go" />
         <item itemvalue="Go Build.go build Go/demo/OOP/template" />
         <item itemvalue="Go Build.go build Go/demo/OOP/model01" />
         <item itemvalue="Go Build.go build Model01.go" />
-        <item itemvalue="Go Build.go build goRoutine.go" />
       </list>
     </recent_temporary>
   </component>
