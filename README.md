@@ -34,6 +34,7 @@ type Rect struct {
 x, y float64     
 width, height float64 }
 ```
+[匿名组合](https://github.com/linyuanbin/Go/blob/master/demo/OOP/extends/Model.go)
 
 #### 1.2 可见性
 Go语言对关键字的增加非常吝啬，其中没有private、protected、public这样的关键 字。要使某个符号对其他包（package）可见</br>

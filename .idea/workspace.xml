@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="710ccecf-2e88-4adb-91d2-9f2ff0271197" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/demo/OOP/extends/Model.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -77,13 +79,22 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build Go/demo">
+  <component name="RunManager" selected="Go Build.go build Go/demo/OOP/extends">
     <configuration name="go build Go/demo" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="Go" />
       <working_directory value="$PROJECT_DIR$/" />
       <kind value="PACKAGE" />
       <filePath value="$PROJECT_DIR$/demo/syncOnce.go" />
       <package value="Go/demo" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build Go/demo/OOP/extends" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="Go" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/demo/OOP/extends/Model.go" />
+      <package value="Go/demo/OOP/extends" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
@@ -105,15 +116,6 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build Model01.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="Go" />
-      <working_directory value="$PROJECT_DIR$/demo/OOP/model01" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/demo/OOP/model01/Model01.go" />
-      <package value="Go" />
-      <directory value="$PROJECT_DIR$/" />
-      <method v="2" />
-    </configuration>
     <configuration name="go build NewError.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="Go" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -125,18 +127,18 @@
     </configuration>
     <list>
       <item itemvalue="Go Build.go build Go/demo/OOP/model01" />
-      <item itemvalue="Go Build.go build Model01.go" />
       <item itemvalue="Go Build.go build Go/demo/OOP/template" />
       <item itemvalue="Go Build.go build NewError.go" />
       <item itemvalue="Go Build.go build Go/demo" />
+      <item itemvalue="Go Build.go build Go/demo/OOP/extends" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build Go/demo/OOP/extends" />
         <item itemvalue="Go Build.go build Go/demo" />
         <item itemvalue="Go Build.go build NewError.go" />
         <item itemvalue="Go Build.go build Go/demo/OOP/template" />
         <item itemvalue="Go Build.go build Go/demo/OOP/model01" />
-        <item itemvalue="Go Build.go build Model01.go" />
       </list>
     </recent_temporary>
   </component>
